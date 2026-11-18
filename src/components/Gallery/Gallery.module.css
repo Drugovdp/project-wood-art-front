@@ -1,0 +1,105 @@
+.section {
+  padding: 5rem 0;
+  background-color: var(--color-bg);
+}
+
+.title {
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sliderWrap {
+  position: relative;
+  padding: 0 1rem; /* место для стрелок */
+}
+
+.swiper {
+  padding-bottom: 3rem; /* место для пагинации */
+}
+
+.slide {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  aspect-ratio: 16 / 10;
+  background-color: var(--color-bg-light);
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.slide:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+}
+
+.caption {
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* ---------- Стрелки Swiper ---------- */
+
+.sliderWrap :global(.swiper-button-prev),
+.sliderWrap :global(.swiper-button-next) {
+  color: var(--color-accent);
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgba(26, 26, 26, 0.8);
+  border: 1px solid rgba(197, 168, 128, 0.3);
+  border-radius: 50%;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.sliderWrap :global(.swiper-button-prev:hover),
+.sliderWrap :global(.swiper-button-next:hover) {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  border-color: var(--color-accent);
+}
+
+.sliderWrap :global(.swiper-button-prev::after),
+.sliderWrap :global(.swiper-button-next::after) {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.sliderWrap :global(.swiper-button-prev) {
+  left: 0;
+}
+
+.sliderWrap :global(.swiper-button-next) {
+  right: 0;
+}
+
+/* ---------- Мобильные ---------- */
+
+@media (max-width: 640px) {
+  .sliderWrap {
+    padding: 0;
+  }
+
+  .sliderWrap :global(.swiper-button-prev),
+  .sliderWrap :global(.swiper-button-next) {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .sliderWrap :global(.swiper-button-prev::after),
+  .sliderWrap :global(.swiper-button-next::after) {
+    font-size: 0.875rem;
+  }
+}

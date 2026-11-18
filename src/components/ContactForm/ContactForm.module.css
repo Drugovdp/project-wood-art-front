@@ -1,0 +1,74 @@
+.section {
+  padding: 5rem 0;
+  background-color: var(--color-bg-light);
+}
+
+.inner {
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.title {
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.field label {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  background-color: var(--color-bg);
+  border: 1px solid rgba(197, 168, 128, 0.3);
+  border-radius: 0.375rem;
+  padding: 0.75rem 1rem;
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.success {
+  color: #4ade80;
+  font-size: 0.875rem;
+}
+
+.error {
+  color: #f87171;
+  font-size: 0.875rem;
+}
+
+.note {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
